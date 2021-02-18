@@ -18,7 +18,6 @@ body {
 .headline{
   display: flex;
   justify-content: center;
-  align-self: flex-start;
 }
 .flex-outer,
 .flex-inner {
