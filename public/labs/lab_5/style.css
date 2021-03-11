@@ -1,0 +1,19 @@
+#mapid { height: 450px; }
+
+#search-form {
+    background-color: rgba(250, 229, 170,0.5);
+}
+
+#submit {
+    background-color: black;
+    color: white;
+}
+
+.target-list li{
+    background-color: black;
+    color: white;
+    padding: 6px;
+    margin: 10px;
+    box-shadow: 0 0 10px #333;
+    border-radius: 4px;
+}
