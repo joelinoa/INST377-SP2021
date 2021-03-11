@@ -19,7 +19,7 @@ async function dataHandler(mapObjectFromFunction) {
   const formInput = document.querySelector('#search-form');
   const searcher = document.querySelector('#search');
   const targList = document.querySelector('.target-list');
-  const request = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
+  const request = await fetch('/api')
   const restaurants = await request.json();
   //console.log(restaurants)
   
@@ -30,7 +30,7 @@ async function dataHandler(mapObjectFromFunction) {
     const filtered = restaurants.filter((record) => record.zip.includes(searcher.value)&& record.geocoded_column_1);
     console.table(filtered)
     const topFive = filtered.slice(0,5);
-    
+
     topFive.forEach((item) => {
       const longLat = item.geocoded_column_1.coordinates;
       const marker = L.marker([longLat[1], longLat[0]]).addTo(mapObjectFromFunction);
